@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myservice
+  name: monservice
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myservice
+      app: monservice
   template:
     metadata:
       labels:
-        app: myservice
+        app: monservice
     spec:
       containers:
-        - image: efrei/myservice:1
+        - image: dewguy20/monservice:1
           imagePullPolicy: IfNotPresent
-          name: myservice
+          name: monservice
       restartPolicy: Always
